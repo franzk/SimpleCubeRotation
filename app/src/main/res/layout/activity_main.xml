@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <net.franzka.simplecuberotation.DrawingView
+        android:id="@+id/viewCanvas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/til_angle_x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_angle_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:hint="@string/angle_x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/til_angle_y"
+        app:layout_constraintBottom_toTopOf="@id/button_start"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_angle_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            android:ems="4"
+            android:text="@string/angle_x_default_value"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_angle_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:hint="@string/angle_y"
+        app:layout_constraintStart_toEndOf="@id/til_angle_x"
+        app:layout_constraintEnd_toStartOf="@id/til_angle_z"
+        app:layout_constraintBottom_toBottomOf="@id/til_angle_x"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_angle_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            android:ems="4"
+            android:text="@string/angle_y_default_value"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_angle_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:hint="@string/angle_z"
+        app:layout_constraintStart_toEndOf="@id/til_angle_y"
+        app:layout_constraintEnd_toStartOf="@id/til_delay"
+        app:layout_constraintBottom_toBottomOf="@id/til_angle_x"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_angle_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            android:ems="4"
+            android:text="@string/angle_z_default_value"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_delay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:hint="@string/delay"
+        app:layout_constraintStart_toEndOf="@id/til_angle_z"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/til_angle_x"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            android:ems="4"
+            android:text="@string/delay_default_value"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

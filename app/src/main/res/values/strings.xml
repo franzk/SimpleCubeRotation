@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Simple Cube Rotation</string>
+    <string name="angle_x">angle X</string>
+    <string name="angle_x_default_value">1</string>
+    <string name="angle_y">angle Y</string>
+    <string name="angle_y_default_value">2</string>
+    <string name="angle_z">angle Z</string>
+    <string name="angle_z_default_value">5</string>
+    <string name="delay">delay</string>
+    <string name="delay_default_value">20</string>
+    <string name="start">START</string>
+</resources>
